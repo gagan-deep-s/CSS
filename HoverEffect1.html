@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hover Effect</title>
+</head>
+<body>
+<div class="container">
+	<div class="box">
+		<div class="imgBox img">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div>
+	</div>
+	<div class="box"><div class="imgBox img0">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+	<div class="box"><div class="imgBox img1">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+	<div class="box"><div class="imgBox img2">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+	<div class="box"><div class="imgBox img3">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+	<div class="box"><div class="imgBox img4">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+	<div class="box"><div class="imgBox img5">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+	<div class="box"><div class="imgBox img6">
+		</div>
+		<div class="details"> 
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, vero, quis id soluta commodi sapiente impedit placeat excepturi aut minus eius beatae odio reprehenderit accusantium sint dicta quidem eos tenetur.</p>
+			</div>
+		</div></div>
+</div>
+<style> 
+body{
+	margin: 0;
+	padding: 0;
+	background: #262626;
+	font-family: sans-serif;
+}
+.container{
+	width: 1280px;
+	margin: 70px auto 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.container .box{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: #ff0;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+	overflow: hidden;
+
+}
+.container .box .imgBox{
+	position: relative;
+	width:300px;
+	height:300px;
+	transition: transform 2s;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.container .box:hover .imgBox{
+	transform: scale(1.2);
+}
+.container .box .details{
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background: rgba(0,0,0,0.5);
+	transform: scaleY(0);
+	transition: transform .5s;
+}
+.container .box:hover .details{
+	transform: scaleY(1);
+}
+.container .box .details .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+}
+.container .box .details .content p{
+	margin: 10px 0 0;
+	padding:0;
+
+}
+.img{
+		background: url("img/6.jpg");
+}
+.img0{
+		background: url("img/1.jpg");
+}
+.img1{
+		background: url("img/7.jpg");
+}
+.img2{
+		background: url("img/8.jpg");
+}
+.img3{
+		background: url("img/9.jpg");
+}
+.img4{
+		background: url("img/10.jpg");
+}
+.img5{
+		background: url("img/11.jpg");
+}
+.img6{
+		background: url("img/gagan.jpeg");
+}
+</style>	
+</body>
+</html>

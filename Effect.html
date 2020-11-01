@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Effect</title>
+</head>
+<body>
+	<div class="card">
+		<div class="imgBox">
+			<img src="img/node.png"/>
+		</div>
+		<div class="details"> 
+			<h2>Lorem ipsum dolor</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, dignissimos, id pariatur impedit quod dolorem vero iusto omnis deserunt ex ab nesciunt tempore vitae mollitia accusamus illo quam consequatur itaque.</p>
+		</div>
+	</div>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap'); 
+body{
+	 margin: 0;
+	 padding: 0;
+	 background: #708d00;
+}
+.card{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	width: 300px;
+	height: 285px;
+	background: #fff;
+	transform-style: preserve-3d;
+	transform: translate(-50%,-50%) perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0,0,0,0.5), 0 20px 100px rgba(0,0,0,0.5);
+	transition: 1s;
+}
+.card:hover{
+	transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5), 0 10px 100px rgba(0,0,0,0.5);
+}
+.card:before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: #475b02;
+	transform-origin: bottom;
+	transform: skewX(-45deg);
+}
+.card:after{
+	content: '';
+	position: absolute;
+	top:0;
+	right: -5px;
+	width: 5px;
+	height: 100%;
+	background: #7EA301;
+	transform-origin: left;
+	transform: skewY(-45deg);
+}
+.card .imgBox{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-origin: left;
+	z-index: 1;
+	transition: 1s cubic-bezier(.15,1.7,.84,.58);
+	background: radial-gradient(green,rgba(0,0,0,1));
+}
+.card:hover .imgBox{
+	transform: rotateY(-135deg);
+}
+.card .details{
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 20px;
+	z-index: -1;
+	font-family: 'Quicksand', sans-serif;
+}
+</style>
+</body>
+</html>

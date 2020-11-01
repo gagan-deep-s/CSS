@@ -1,0 +1,81 @@
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<a href="#" id="show">Show Pop</a>
+
+<div class="popup popup-data">
+    
+    <a href="#" id="close"><i class="fa fa-times" style="float:right;margin-top:5px;margin-right:5px;font-size:30px;"></i></a>  
+	<center><img src="img\ceh.jpg" style="max-width:120px;margin-top:10px;"></center>
+</div>
+
+<div class="popup opacity-provider">
+
+</div><a href="#" id="show1">Show Pop</a>
+
+<div class="popup1 popup-data">
+    
+    <a href="#" id="close1"><i class="fa fa-times" style="float:right;margin-top:5px;margin-right:5px;font-size:30px;"></i></a>  
+	<center><img src="img\java.jpg" style="max-width:120px;border-radius:40%;margin-top:10px;"></center>
+</div>
+
+<div class="popup1 opacity-provider">
+
+</div>
+ <script src="js/jquery.min.js"></script> 
+<script>
+$(function() {
+    $("#show").click(function() {
+        $("div.popup").show();
+		
+        return false;
+    });
+    $("#close").click(function() {
+        $("div.popup").hide();
+        return false;
+    });
+	
+});$(function() {
+    $("#show1").click(function() {
+        $("div.popup1").show();
+		
+        return false;
+    });
+    $("#close1").click(function() {
+        $("div.popup1").hide();
+        return false;
+    });
+	
+});
+</script>
+<style>
+div.opacity-provider
+{
+    display:none;
+    top:0;
+    left:0;
+    min-width:100%;
+    min-height:100%;/*these make the opacity provider fill the screen*/
+    opacity:0.4;
+    filter:alpha(opacity=50);  
+    position:absolute;
+     background:black;
+	 filter:blur(8px);
+  z-index:100;  
+}
+
+div.popup-data
+{
+    width:500px;
+    height:500px;
+    display:none;
+         background:white;
+      z-index:101;   /*must be greater than the opacity provider*/   
+    position:absolute;  
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%); 
+	border-radius:10px;
+	box-shadow:5px 5px #263238;
+     /*centers the div*/
+}
+</style>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate</title>
+</head>
+<style> 
+.restart-demo{
+	width:100px;
+	height:100px;
+	background:red;
+	margin-bottom: 5px;
+	color: #000;
+}
+button{
+	width: 120px;
+	height: 45px;
+	color: white;
+	background: tomato;
+
+	font-size: 14px;
+	cursor: pointer;
+	box-shadow: 5px 5px black;
+}
+.test{
+	width: 100px;
+	height: 100px;
+	font-size: 26px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 5px 7px gray;
+}
+</style>
+<body>
+	<div class="restart-demo"></div>
+	<input class="test" value="0" readonly>
+	<script src="js/anime.3.0.0-alpha.js"></script>
+	<button class="restart">Click me !</button>
+	<script>
+	anime({
+	  targets: 'input',
+	  value: [0, 1000],
+	  duration: 3000,
+	  round: 1,
+	  easing: 'easeInOutExpo'
+	});
+	</script>
+</body>
+</html>
